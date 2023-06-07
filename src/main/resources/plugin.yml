@@ -4,3 +4,13 @@ version: 1.0
 api-version: 1.13
 author: Holes in the Code
 description: Hole in the Wall plugin
+commands:
+  pastewall:
+    permission: hitw.admin
+    description: pastes a wall of the given name
+    usage: /pastewall
+
+
+permissions:
+  hitw.admin:
+    default: op
