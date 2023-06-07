@@ -1,19 +1,16 @@
 package com.hitc.hitwplugin.main.commands
 
-import com.hitc.hitwplugin.main.MainObject
+import com.hitc.hitwplugin.main.Main
 import com.hitc.hitwplugin.main.core.WallBlockType
 import com.hitc.hitwplugin.main.utils.MapFileUtils
 import com.hitc.hitwplugin.main.utils.blockPosition
 import org.bukkit.Location
-import org.bukkit.Material
 import org.bukkit.block.Block
 import org.bukkit.block.BlockFace
-import org.bukkit.block.BlockState
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.material.Attachable
 import org.bukkit.material.Lever
 import org.bukkit.material.Stairs
 
@@ -43,8 +40,8 @@ class PasteWall : CommandExecutor {
 
     private fun pasteBlock(location : Location, blockType : WallBlockType, p : Player) {
         location.add(p.blockPosition)
-        val block = MainObject.defaultBlockPalette.blocks[blockType]
-        val blockData = MainObject.defaultBlockPalette.blockData[blockType]
+        val block = Main.defaultBlockPalette.blocks[blockType]
+        val blockData = Main.defaultBlockPalette.blockData[blockType]
         var currentBlock: Block = p.world.getBlockAt(location)
 
         currentBlock.setType(block, false)

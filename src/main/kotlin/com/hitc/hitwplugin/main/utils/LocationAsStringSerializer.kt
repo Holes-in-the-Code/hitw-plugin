@@ -1,6 +1,5 @@
 package com.hitc.hitwplugin.main.utils
 
-import com.hitc.hitwplugin.main.utils.SerialLocation
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.descriptors.PrimitiveKind
